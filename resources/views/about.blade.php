@@ -27,9 +27,9 @@
 
     <!-- meta -->
     <meta charset="UTF-8">
-    <title>Контакты
+    <title>О компании
     </title>
-    <meta name="description" content="Контакты">
+    <meta name="description" content="О компании">
     <meta data-config="{&quot;static-versioned&quot;: &quot;1.38&quot;}" name="theme-meta-data" content="">
     <meta name="robots" content="index,follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -40,9 +40,9 @@
     <!-- canonical url-->
 
     <!-- rss feed-->
-    <meta property="og:title" content="Контакты">
+    <meta property="og:title" content="О компании">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://demo-loft.myinsales.ru/page/contacts">
+    <meta property="og:url" content="https://demo-loft.myinsales.ru/page/about-us">
 
 
     <!-- icons-->
@@ -1130,15 +1130,15 @@
                                     <ul class="header__bottom_menu js-cut-list-menu cut-list" data-navigation=""
                                         data-menu-handle="main-menu" data-navigation-inited="true">
 
-                                        <li class="header__bottom_menu-item cut-list__elem" data-navigation-item=""
-                                            data-index="0">
-                                            <a href="/page/about-us" class="header__bottom_menu-link"
+                                        <li class="header__bottom_menu-item is-current cut-list__elem"
+                                            data-navigation-item="" data-index="0">
+                                            <a href="/page/about-us" class="header__bottom_menu-link is-current"
                                                data-navigation-link="/page/about-us">О компании</a>
                                         </li>
 
-                                        <li class="header__bottom_menu-item is-current cut-list__elem"
-                                            data-navigation-item="" data-index="1">
-                                            <a href="/page/contacts" class="header__bottom_menu-link is-current"
+                                        <li class="header__bottom_menu-item cut-list__elem" data-navigation-item=""
+                                            data-index="1">
+                                            <a href="/page/contacts" class="header__bottom_menu-link"
                                                data-navigation-link="/page/contacts">Контакты</a>
                                         </li>
 
@@ -1232,7 +1232,7 @@
                         </li>
 
                         <li class="breadcrumb-item">
-                            <span class="breadcrumb-page">Контакты</span>
+                            <span class="breadcrumb-page">О компании</span>
                         </li>
 
                     </ul>
@@ -1248,7 +1248,7 @@
             <div class="layout__content">
                 <h1 class="page-headding heading">
 
-                    Контакты
+                    О компании
 
                 </h1>
 
@@ -1260,62 +1260,37 @@
              style="--layout-wide-bg:false; --layout-mt:0vw; --layout-mb:0vw; --layout-pt:0vw; --layout-pb:2vw; --layout-content-max-width:808px; --layout-wide-content:false; --layout-edge:false; --hide-desktop:false; --hide-mobile:false;">
             <div class="layout__content">
                 <div class="static-text">
-                    <p>Разместите на этой странице информацию с контактами вашего интернет-магазина, а также краткую
-                        информацию о нем.</p>
+                    <p>Разместите на этой странице информацию с описанием вашего магазина.</p>
                     <p><strong><em>Например:</em></strong></p>
-                    <p><strong><em>----</em></strong></p>
-                    <p>Вы можете найти нас по адресу: г. Москва, ул. Торговая, дом 123, офис 456</p>
-                    <p>Как добраться: Сокольническая линия метро, последний вагон из центра, выход в сторону Казанского
-                        вокзала.</p>
-                    <p>Телефон отдела продаж: 8-495-123-45-67 (многоканальный)</p>
-                    <p>Телефон отдела оптовых продаж: 8-495-765-43-21</p>
-                    <p>Email: sales@myshop.ru</p>
-                    <p><strong>График работы офиса и склада:</strong></p>
-                    <div class="table-wrapper">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>Понедельник</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Вторник</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Среда</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Четверг</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Пятница</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Суббота</td>
-                                <td>с 10:00 до 20:00</td>
-                            </tr>
-                            <tr>
-                                <td>Воскресенье</td>
-                                <td>с 10:00 до 20:00</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p>Заказы через сайт принимаются круглосуточно!</p>
-                    <p><strong>Реквизиты:</strong></p>
-                    <p>ИП Иванов Иван Иванович</p>
-                    <p>ОГРНИП: 123456789012345</p>
-                    <p>ИНН: 123456789012</p>
-                    <p>КПП: 123456789</p>
-                    <p style="text-align: left;">----</p>
+                    <p><em><strong>Интернет-магазин "MyShop.ru" – лучшие товары по низким ценам!</strong></em></p>
+                    <p><em>Мы рады предложить вам недорогие, но качественные товары с подробными описаниями,
+                            характеристиками и фотографиями. У нас Вы можете купить замечательные товары: технику,
+                            электронику, одежду, обувь, игрушки, книги и многое другое в вашем регионе по ценам
+                            производителей и без наценки.</em></p>
+                    <p><em>Продажа большого ассортимента разнообразных товаров – основная специализация нашего
+                            интернет-магазина. Мы доставим ваш заказ бесплатно в любой уголок мира, осуществим подробную
+                            консультацию по товарам и поможем с выбором.</em></p>
+                    <p><em>Магазин "MyShop.ru" предлагает Вам купить качественную и доступную технику, электронику,
+                            одежду, обувь, игрушки, книги и многое другое с доставкой! Все виды современных товаров от
+                            эконом класса до более дорогих представлены в нашем каталоге.</em></p>
+                    <p><em>Вы можете купить любые товары в вашем городе: технику, электронику, одежду, обувь, игрушки,
+                            книги и многое другое.</em></p>
+                    <p><em><strong>Наши главные преимущества:</strong></em></p>
+                    <ul>
+                        <li><em>Низкие цены от производителей</em></li>
+                        <li><em>Доставка по городу в день заказа</em></li>
+                        <li><em>Доставка заказов Почтой по всей Стране за 5-15 дней</em></li>
+                        <li><em>Только оригинальная и сертифицированная продукция</em></li>
+                        <li><em>Гарантия на все товары – 5 лет!</em></li>
+                        <li><em>Не понравился товар? Вернем или обменяем в течение 14-ти дней без оформления лишних
+                                бумаг!</em></li>
+                        <li><em>Бонусы и скидки для постоянных покупателей</em></li>
+                    </ul>
+                    <p>----</p>
                     <p><em>Эту страницу можно отредактировать в бэк-офисе сайта в разделе <a rel="noopener noreferrer"
                                                                                              href="/admin2/pages"
                                                                                              target="_blank">Меню и
-                                страницы</a>.</em><em><br></em></p>
+                                страницы</a>.</em></p>
                     <p><em>Подробнее о создании текстовых страниц и меню, читайте в документации:&nbsp;<a
                                 rel="noopener noreferrer"
                                 href="https://www.insales.ru/collection/doc-settings/product/razdel-menyu"
@@ -1496,10 +1471,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="footer_copyright">
-                        <p><a rel="noopener" href="https://www.insales.ru/" target="_blank">Интернет-магазин создан на
-                                InSales</a></p>
                     </div>
                 </div>
 

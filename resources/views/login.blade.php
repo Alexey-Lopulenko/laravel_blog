@@ -1,14 +1,249 @@
-<html
-    style="--color-btn-bg:#B79B7E; --color-btn-bg-is-dark:true; --bg:#ffffff; --bg-is-dark:false; --color-text: var(--color-text-dark); --color-text-minor-shade: var(--color-text-dark-minor-shade); --color-text-major-shade: var(--color-text-dark-major-shade); --color-text-half-shade: var(--color-text-dark-half-shade); --color-notice-warning-is-dark:false; --color-notice-success-is-dark:false; --color-notice-error-is-dark:false; --color-notice-info-is-dark:false; --color-form-controls-bg:var(--bg); --color-form-controls-bg-disabled:var(--bg-minor-shade); --color-form-controls-border-color:var(--bg-half-shade); --color-form-controls-color:var(--color-text); --is-editor:false; --vh:1008px;">
+<html class="desktop landscape"
+      style="--color-btn-bg:#B79B7E; --color-btn-bg-is-dark:true; --bg:#ffffff; --bg-is-dark:false; --color-text: var(--color-text-dark); --color-text-minor-shade: var(--color-text-dark-minor-shade); --color-text-major-shade: var(--color-text-dark-major-shade); --color-text-half-shade: var(--color-text-dark-half-shade); --color-notice-warning-is-dark:false; --color-notice-success-is-dark:false; --color-notice-error-is-dark:false; --color-notice-info-is-dark:false; --color-form-controls-bg:var(--bg); --color-form-controls-bg-disabled:var(--bg-minor-shade); --color-form-controls-border-color:var(--bg-half-shade); --color-form-controls-color:var(--color-text); --is-editor:false; --vh:1008px;">
 <head>
+    <style>
+        .fc.old-theme-fix {
+            overflow: visible;
+        }
+
+        .fc.old-theme-fix:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        .tt-dropdown-menu {
+            max-height: 300px;
+            overflow-y: auto;
+            min-width: 160px;
+            margin-top: 2px;
+            padding: 5px 5px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            background-clip: padding-box;
+
+        }
+
+        .twitter-typeahead {
+            display: inherit !important;
+        }
+
+        .twitter-typeahead .tt-query, .twitter-typeahead .tt-hint {
+            margin-bottom: 0;
+        }
+
+        .tt-suggestion, .tt-footer {
+            display: block;
+            padding: 1px 0px 1px 10px;
+        }
+
+        .tt-suggestion.tt-is-under-cursor, .tt-footer.tt-is-under-cursor {
+            color: #fff;
+            background-color: #428bca;
+        }
+
+        .tt-suggestion.tt-is-under-cursor a, .tt-footer.tt-is-under-cursor a {
+            color: #fff;
+        }
+
+        .tt-suggestion.tt-cursor, .tt-footer.tt-cursor {
+            color: #fff;
+            background-color: #428bca;
+        }
+
+        .tt-suggestion p, .tt-footer p {
+            margin: 0;
+        }
+    </style>
+    <style>
+        .spinner-container, .spinner {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .spinner-container {
+            z-index: 900;
+            overflow: hidden;
+
+        &
+        .animate .spinner {
+
+        &
+        .slide-up {
+            opacity: 0;
+        }
+
+        &
+        .fade-in {
+            opacity: 0;
+        }
+
+        }
+        }
+
+        .spinner {
+            height: 100%;
+            opacity: 0.6;
+            background: #fff;
+
+
+        {{--.slide-up {--}}
+        {{--@include  transition-property(opacity, bottom);--}}
+        {{--@include  transition-duration(0.3 s);--}}
+        {{--}--}}
+
+
+        {{--.fade-in {--}}
+        {{--@include  transition-property(opacity);--}}
+        {{--@include  transition-duration(1 s);--}}
+        {{--}--}}
+
+        .spin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        }
+
+
+        .spinner {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .spinner-screen {
+            position: fixed;
+            z-index: 10000;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
     <meta
         data-config="{&quot;money_with_currency_format&quot;:{&quot;delimiter&quot;:&quot;&quot;,&quot;separator&quot;:&quot;.&quot;,&quot;format&quot;:&quot;%n&nbsp;%u&quot;,&quot;unit&quot;:&quot;₽&quot;,&quot;show_price_without_cents&quot;:0},&quot;currency_code&quot;:&quot;RUR&quot;,&quot;facebook&quot;:{&quot;pixelActive&quot;:false,&quot;currency_code&quot;:&quot;RUB&quot;,&quot;use_variants&quot;:null},&quot;vk&quot;:{&quot;pixel_active&quot;:null,&quot;price_list_id&quot;:null},&quot;new_ya_metrika&quot;:false,&quot;ecommerce_data_container&quot;:&quot;dataLayer&quot;,&quot;common_js_version&quot;:null,&quot;vue_ui_version&quot;:null,&quot;feedback_captcha_enabled&quot;:null,&quot;account_id&quot;:1006515,&quot;hide_items_out_of_stock&quot;:false,&quot;forbid_order_over_existing&quot;:true,&quot;minimum_items_price&quot;:null,&quot;enable_comparison&quot;:true,&quot;locale&quot;:&quot;ru&quot;,&quot;client_group&quot;:null,&quot;consent_to_personal_data&quot;:{&quot;active&quot;:false,&quot;obligatory&quot;:true,&quot;description&quot;:&quot;Настоящим подтверждаю, что я ознакомлен и согласен с условиями \u003ca href='/page/oferta' target='blank'\u003eоферты и политики конфиденциальности\u003c/a\u003e.&quot;},&quot;recaptcha_key&quot;:&quot;6Lc0T0YUAAAAAAVNiH-_bnSC4E-YHMFTeYOqZyRx&quot;,&quot;checkout_float_order_content_block&quot;:false,&quot;sber_id_app_id&quot;:&quot;5b5a3c11-72e5-4871-8649-4cdbab3ba9a4&quot;}"
         name="shop-config" content="">
     <meta name="js-evnvironment" content="production">
     <meta name="default-locale" content="ru">
     <meta name="insales-redefined-api-methods" content="[]">
-    <!--InsalesCounter -->
+    <script type="text/javascript"
+            src="https://bam-cell.nr-data.net/1/fd0d8ed08d?a=40346406&amp;v=1210.e2a3f80&amp;to=c14IQRMOXV4EQR1DUF9BFRoAAlJdFF1GH0tVQhVcDg9CHQ9WRQ%3D%3D&amp;rst=3510&amp;ck=1&amp;ref=https://demo-loft.myinsales.ru/client_account/session/new&amp;qt=1&amp;ap=319&amp;be=2000&amp;fe=3319&amp;dc=2683&amp;perf=%7B%22timing%22:%7B%22of%22:1632754387141,%22n%22:0,%22u%22:737,%22r%22:12,%22ue%22:737,%22re%22:243,%22f%22:243,%22dn%22:243,%22dne%22:243,%22c%22:243,%22ce%22:243,%22rq%22:251,%22rp%22:691,%22rpe%22:748,%22dl%22:740,%22di%22:2426,%22ds%22:2426,%22de%22:2713,%22dc%22:3316,%22l%22:3316,%22le%22:3348%7D,%22navigation%22:%7B%22rc%22:1%7D%7D&amp;fp=2926&amp;fcp=2926&amp;jsonp=NREUM.setToken"></script>
+    <script src="https://js-agent.newrelic.com/nr-1210.min.js"></script>
     <script type="text/javascript" async="" src="/javascripts/insales_counter.js?5"></script>
+    <script src="/packs/js/shop_checkout2_bundle-69ee096df2485b45e40c.js"></script>
+    <style type="text/css">cufon {
+            text-indent: 0 !important;
+        }
+
+        @media screen, projection {
+            cufon {
+                display: inline !important;
+                display: inline-block !important;
+                position: relative !important;
+                vertical-align: middle !important;
+                font-size: 1px !important;
+                line-height: 1px !important;
+            }
+
+            cufon cufontext {
+                display: -moz-inline-box !important;
+                display: inline-block !important;
+                width: 0 !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                text-indent: -10000in !important;
+            }
+
+            cufon canvas {
+                position: relative !important;
+            }
+        }
+
+        @media print {
+            cufon {
+                padding: 0 !important;
+            }
+
+            cufon canvas {
+                display: none !important;
+            }
+        }</style>
+    <style type="text/css"></style>
+    <style type="text/css">span.im-caret {
+            -webkit-animation: 1s blink step-end infinite;
+            animation: 1s blink step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to {
+                border-right-color: black;
+            }
+            50% {
+                border-right-color: transparent;
+            }
+        }
+
+        @-webkit-keyframes blink {
+            from, to {
+                border-right-color: black;
+            }
+            50% {
+                border-right-color: transparent;
+            }
+        }
+
+        span.im-static {
+            color: grey;
+        }
+
+        div.im-colormask {
+            display: inline-block;
+            border-style: inset;
+            border-width: 2px;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+
+        div.im-colormask > input {
+            position: absolute;
+            display: inline-block;
+            background-color: transparent;
+            color: transparent;
+            -webkit-appearance: caret;
+            -moz-appearance: caret;
+            appearance: caret;
+            border-style: none;
+            left: 0; /*calculated*/
+        }
+
+        div.im-colormask > input:focus {
+            outline: none;
+        }
+
+        div.im-colormask > input::-moz-selection {
+            background: none;
+        }
+
+        div.im-colormask > input::selection {
+            background: none;
+        }
+
+        div.im-colormask > input::-moz-selection {
+            background: none;
+        }
+
+        div.im-colormask > div {
+            color: black;
+            display: inline-block;
+            width: 100px; /*calculated*/
+        }</style>
+    <!--InsalesCounter -->
     <script type="text/javascript">
         if (typeof (__id) == 'undefined') {
             var __id = 1006515;
@@ -24,15 +259,462 @@
         }
     </script>
     <!-- /InsalesCounter -->
-
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token"
+          content="DvrhTm8/BCbqpxAcext5WEOXaAmCYrraFYzdF+n2mScFbWP6cg6ixs1AAc/iA2UIftki6jOL0IJFj9Kx92iPuQ==">
     <!-- meta -->
     <meta charset="UTF-8">
-    <title>Контакты
+    <title>Вход в кабинет покупателя
     </title>
-    <meta name="description" content="Контакты">
+    <meta name="description" content="">
     <meta data-config="{&quot;static-versioned&quot;: &quot;1.38&quot;}" name="theme-meta-data" content="">
     <meta name="robots" content="index,follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script>window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam-cell.nr-data.net",
+            "errorBeacon": "bam-cell.nr-data.net",
+            "licenseKey": "fd0d8ed08d",
+            "applicationID": "40346406",
+            "transactionName": "c14IQRMOXV4EQR1DUF9BFRoAAlJdFF1GH0tVQhVcDg9CHQ9WRQ==",
+            "queueTime": 1,
+            "applicationTime": 319,
+            "agent": ""
+        }</script>
+    <script>(window.NREUM || (NREUM = {})).loader_config = {licenseKey: "fd0d8ed08d", applicationID: "40346406"};
+        window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) {
+            function r(n) {
+                if (!e[n]) {
+                    var i = e[n] = {exports: {}};
+                    t[n][0].call(i.exports, function (e) {
+                        var i = t[n][1][e];
+                        return r(i || e)
+                    }, i, i.exports)
+                }
+                return e[n].exports
+            }
+
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var i = 0; i < n.length; i++) r(n[i]);
+            return r
+        }({
+            1: [function (t, e, n) {
+                function r() {
+                }
+
+                function i(t, e, n) {
+                    return function () {
+                        return o(t, [u.now()].concat(f(arguments)), e ? null : this, n), e ? void 0 : this
+                    }
+                }
+
+                var o = t("handle"), a = t(8), f = t(9), c = t("ee").get("tracer"), u = t("loader"), s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    p = "api-", l = p + "ixn-";
+                a(d, function (t, e) {
+                    s[e] = i(p + e, !0, "api")
+                }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), e.exports = newrelic, s.interaction = function () {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function (t, e) {
+                        var n = {}, r = this, i = "function" == typeof e;
+                        return o(l + "tracer", [u.now(), t, n], r), function () {
+                            if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try {
+                                return e.apply(this, arguments)
+                            } catch (t) {
+                                throw c.emit("fn-err", [arguments, this, t], n), t
+                            } finally {
+                                c.emit("fn-end", [u.now()], n)
+                            }
+                        }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) {
+                    m[e] = i(l + e)
+                }), newrelic.noticeError = function (t, e) {
+                    "string" == typeof t && (t = new Error(t)), o("err", [t, u.now(), !1, e])
+                }
+            }, {}], 2: [function (t, e, n) {
+                function r(t) {
+                    if (NREUM.init) {
+                        for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++) if (e = e[n[r]], "object" != typeof e) return;
+                        return e = e[n[n.length - 1]]
+                    }
+                }
+
+                e.exports = {getConfiguration: r}
+            }, {}], 3: [function (t, e, n) {
+                function r() {
+                    return f.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a
+                }
+
+                function i() {
+                    return o
+                }
+
+                var o = (new Date).getTime(), a = o, f = t(10);
+                e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i
+            }, {}], 4: [function (t, e, n) {
+                function r(t) {
+                    return !(!t || !t.protocol || "file:" === t.protocol)
+                }
+
+                e.exports = r
+            }, {}], 5: [function (t, e, n) {
+                function r(t, e) {
+                    var n = t.getEntries();
+                    n.forEach(function (t) {
+                        "first-paint" === t.name ? d("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && d("timing", ["fcp", Math.floor(t.startTime)])
+                    })
+                }
+
+                function i(t, e) {
+                    var n = t.getEntries();
+                    n.length > 0 && d("lcp", [n[n.length - 1]])
+                }
+
+                function o(t) {
+                    t.getEntries().forEach(function (t) {
+                        t.hadRecentInput || d("cls", [t])
+                    })
+                }
+
+                function a(t) {
+                    if (t instanceof m && !g) {
+                        var e = Math.round(t.timeStamp), n = {type: t.type};
+                        e <= p.now() ? n.fid = p.now() - e : e > p.offset && e <= Date.now() ? (e -= p.offset, n.fid = p.now() - e) : e = p.now(), g = !0, d("timing", ["fi", e, n])
+                    }
+                }
+
+                function f(t) {
+                    "hidden" === t && d("pageHide", [p.now()])
+                }
+
+                if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) {
+                    var c, u, s, d = t("handle"), p = t("loader"), l = t(7), m = NREUM.o.EV;
+                    if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) {
+                        c = new PerformanceObserver(r);
+                        try {
+                            c.observe({entryTypes: ["paint"]})
+                        } catch (v) {
+                        }
+                        u = new PerformanceObserver(i);
+                        try {
+                            u.observe({entryTypes: ["largest-contentful-paint"]})
+                        } catch (v) {
+                        }
+                        s = new PerformanceObserver(o);
+                        try {
+                            s.observe({type: "layout-shift", buffered: !0})
+                        } catch (v) {
+                        }
+                    }
+                    if ("addEventListener" in document) {
+                        var g = !1, h = ["click", "keydown", "mousedown", "pointerdown", "touchstart"];
+                        h.forEach(function (t) {
+                            document.addEventListener(t, a, !1)
+                        })
+                    }
+                    l(f)
+                }
+            }, {}], 6: [function (t, e, n) {
+                function r(t, e) {
+                    if (!i) return !1;
+                    if (t !== i) return !1;
+                    if (!e) return !0;
+                    if (!o) return !1;
+                    for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++) if (r[a] !== n[a]) return !1;
+                    return !0
+                }
+
+                var i = null, o = null, a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var f = navigator.userAgent, c = f.match(a);
+                    c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1])
+                }
+                e.exports = {agent: i, version: o, match: r}
+            }, {}], 7: [function (t, e, n) {
+                function r(t) {
+                    function e() {
+                        t(a && document[a] ? document[a] : document[i] ? "hidden" : "visible")
+                    }
+
+                    "addEventListener" in document && o && document.addEventListener(o, e, !1)
+                }
+
+                e.exports = r;
+                var i, o, a;
+                "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState")
+            }, {}], 8: [function (t, e, n) {
+                function r(t, e) {
+                    var n = [], r = "", o = 0;
+                    for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1);
+                    return n
+                }
+
+                var i = Object.prototype.hasOwnProperty;
+                e.exports = r
+            }, {}], 9: [function (t, e, n) {
+                function r(t, e, n) {
+                    e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+                    for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;) o[r] = t[e + r];
+                    return o
+                }
+
+                e.exports = r
+            }, {}], 10: [function (t, e, n) {
+                e.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
+            }, {}], ee: [function (t, e, n) {
+                function r() {
+                }
+
+                function i(t) {
+                    function e(t) {
+                        return t && t instanceof r ? t : t ? u(t, c, a) : a()
+                    }
+
+                    function n(n, r, i, o, a) {
+                        if (a !== !1 && (a = !0), !l.aborted || o) {
+                            t && a && t(n, r, i);
+                            for (var f = e(i), c = v(n), u = c.length, s = 0; s < u; s++) c[s].apply(f, r);
+                            var p = d[w[n]];
+                            return p && p.push([b, n, r, f]), f
+                        }
+                    }
+
+                    function o(t, e) {
+                        y[t] = v(t).concat(e)
+                    }
+
+                    function m(t, e) {
+                        var n = y[t];
+                        if (n) for (var r = 0; r < n.length; r++) n[r] === e && n.splice(r, 1)
+                    }
+
+                    function v(t) {
+                        return y[t] || []
+                    }
+
+                    function g(t) {
+                        return p[t] = p[t] || i(n)
+                    }
+
+                    function h(t, e) {
+                        l.aborted || s(t, function (t, n) {
+                            e = e || "feature", w[n] = e, e in d || (d[e] = [])
+                        })
+                    }
+
+                    var y = {}, w = {}, b = {
+                        on: o,
+                        addEventListener: o,
+                        removeEventListener: m,
+                        emit: n,
+                        get: g,
+                        listeners: v,
+                        context: e,
+                        buffer: h,
+                        abort: f,
+                        aborted: !1
+                    };
+                    return b
+                }
+
+                function o(t) {
+                    return u(t, c, a)
+                }
+
+                function a() {
+                    return new r
+                }
+
+                function f() {
+                    (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {})
+                }
+
+                var c = "nr@context", u = t("gos"), s = t(8), d = {}, p = {}, l = e.exports = i();
+                e.exports.getOrSetContext = o, l.backlog = d
+            }, {}], gos: [function (t, e, n) {
+                function r(t, e, n) {
+                    if (i.call(t, e)) return t[e];
+                    var r = n();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(t, e, {value: r, writable: !0, enumerable: !1}), r
+                    } catch (o) {
+                    }
+                    return t[e] = r, r
+                }
+
+                var i = Object.prototype.hasOwnProperty;
+                e.exports = r
+            }, {}], handle: [function (t, e, n) {
+                function r(t, e, n, r) {
+                    i.buffer([t], r), i.emit(t, e, n)
+                }
+
+                var i = t("ee").get("handle");
+                e.exports = r, r.ee = i
+            }, {}], id: [function (t, e, n) {
+                function r(t) {
+                    var e = typeof t;
+                    return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () {
+                        return i++
+                    })
+                }
+
+                var i = 1, o = "nr@id", a = t("gos");
+                e.exports = r
+            }, {}], loader: [function (t, e, n) {
+                function r() {
+                    if (!R++) {
+                        var t = M.info = NREUM.info, e = v.getElementsByTagName("script")[0];
+                        if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort();
+                        c(E, function (e, n) {
+                            t[e] || (t[e] = n)
+                        });
+                        var n = a();
+                        f("mark", ["onload", n + M.offset], null, "api"), f("timing", ["load", n]);
+                        var r = v.createElement("script");
+                        0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e)
+                    }
+                }
+
+                function i() {
+                    "complete" === v.readyState && o()
+                }
+
+                function o() {
+                    f("mark", ["domContent", a() + M.offset], null, "api")
+                }
+
+                var a = t(3), f = t("handle"), c = t(8), u = t("ee"), s = t(6), d = t(4), p = t(2),
+                    l = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, v = m.document,
+                    g = "addEventListener", h = "attachEvent", y = m.XMLHttpRequest, w = y && y.prototype,
+                    b = !d(m.location);
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: m.setImmediate,
+                    CT: clearTimeout,
+                    XHR: y,
+                    REQ: m.Request,
+                    EV: m.Event,
+                    PR: m.Promise,
+                    MO: m.MutationObserver
+                };
+                var x = "" + location, E = {
+                    beacon: "bam.nr-data.net",
+                    errorBeacon: "bam.nr-data.net",
+                    agent: "js-agent.newrelic.com/nr-1210.min.js"
+                }, O = y && w && w[g] && !/CriOS/.test(navigator.userAgent), M = e.exports = {
+                    offset: a.getLastTimestamp(),
+                    now: a,
+                    origin: x,
+                    features: {},
+                    xhrWrappable: O,
+                    userAgent: s,
+                    disabled: b
+                };
+                if (!b) {
+                    t(1), t(5), v[g] ? (v[g]("DOMContentLoaded", o, !1), m[g]("load", r, !1)) : (v[h]("onreadystatechange", i), m[h]("onload", r)), f("mark", ["firstbyte", a.getLastTimestamp()], null, "api");
+                    var R = 0
+                }
+            }, {}], "wrap-function": [function (t, e, n) {
+                function r(t, e) {
+                    function n(e, n, r, c, u) {
+                        function nrWrapper() {
+                            var o, a, s, p;
+                            try {
+                                a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {}
+                            } catch (l) {
+                                i([l, "", [o, a, c], s], t)
+                            }
+                            f(n + "start", [o, a, c], s, u);
+                            try {
+                                return p = e.apply(a, o)
+                            } catch (m) {
+                                throw f(n + "err", [o, a, m], s, u), m
+                            } finally {
+                                f(n + "end", [o, a, p], s, u)
+                            }
+                        }
+
+                        return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper)
+                    }
+
+                    function r(t, e, r, i, o) {
+                        r || (r = "");
+                        var f, c, u, s = "-" === r.charAt(0);
+                        for (u = 0; u < e.length; u++) c = e[u], f = t[c], a(f) || (t[c] = n(f, s ? c + r : r, i, c, o))
+                    }
+
+                    function f(n, r, o, a) {
+                        if (!m || e) {
+                            var f = m;
+                            m = !0;
+                            try {
+                                t.emit(n, r, o, e, a)
+                            } catch (c) {
+                                i([c, n, r, o], t)
+                            }
+                            m = f
+                        }
+                    }
+
+                    return t || (t = s), n.inPlace = r, n.flag = p, n
+                }
+
+                function i(t, e) {
+                    e || (e = s);
+                    try {
+                        e.emit("internal-error", t)
+                    } catch (n) {
+                    }
+                }
+
+                function o(t, e, n) {
+                    if (Object.defineProperty && Object.keys) try {
+                        var r = Object.keys(t);
+                        return r.forEach(function (n) {
+                            Object.defineProperty(e, n, {
+                                get: function () {
+                                    return t[n]
+                                }, set: function (e) {
+                                    return t[n] = e, e
+                                }
+                            })
+                        }), e
+                    } catch (o) {
+                        i([o], n)
+                    }
+                    for (var a in t) l.call(t, a) && (e[a] = t[a]);
+                    return e
+                }
+
+                function a(t) {
+                    return !(t && t instanceof Function && t.apply && !t[p])
+                }
+
+                function f(t, e) {
+                    var n = e(t);
+                    return n[p] = t, o(t, n, s), n
+                }
+
+                function c(t, e, n) {
+                    var r = t[e];
+                    t[e] = f(r, n)
+                }
+
+                function u() {
+                    for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n) e[n] = arguments[n];
+                    return e
+                }
+
+                var s = t("ee"), d = t(9), p = "nr@original", l = Object.prototype.hasOwnProperty, m = !1;
+                e.exports = r, e.exports.wrapFunction = f, e.exports.wrapInPlace = c, e.exports.argsToArray = u
+            }, {}]
+        }, {}, ["loader"]);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta name="format-detection" content="telephone=no">
@@ -40,9 +722,6 @@
     <!-- canonical url-->
 
     <!-- rss feed-->
-    <meta property="og:title" content="Контакты">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://demo-loft.myinsales.ru/page/contacts">
 
 
     <!-- icons-->
@@ -64,7 +743,7 @@
 
     <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </head>
-<body data-multi-lang="false" class="settings_loaded">
+<body class="adaptive settings_loaded" data-multi-lang="false">
 <noscript>
     <div class="njs-alert-overlay">
         <div class="njs-alert-wrapper">
@@ -75,7 +754,7 @@
     </div>
 </noscript>
 
-<div class="page_layout page_layout-clear ">
+<div class="page_layout page_layout-clear">
     <header>
 
         <div class="layout widget-type_widget_v4_header_5_0456c4ba1d9de0667e643ad5a3795f81"
@@ -1136,9 +1815,9 @@
                                                data-navigation-link="/page/about-us">О компании</a>
                                         </li>
 
-                                        <li class="header__bottom_menu-item is-current cut-list__elem"
-                                            data-navigation-item="" data-index="1">
-                                            <a href="/page/contacts" class="header__bottom_menu-link is-current"
+                                        <li class="header__bottom_menu-item cut-list__elem" data-navigation-item=""
+                                            data-index="1">
+                                            <a href="/page/contacts" class="header__bottom_menu-link"
                                                data-navigation-link="/page/contacts">Контакты</a>
                                         </li>
 
@@ -1216,120 +1895,56 @@
 
 
     </header>
-
-
     <main>
-
-        <div class="layout widget-type_system_widget_v4_breadcrumbs_1"
-             style="--delemeter:1; --align:start; --layout-wide-bg:false; --layout-mt:0vw; --layout-mb:0vw; --layout-pt:1vw; --layout-pb:1vw; --layout-content-max-width:1408px; --layout-wide-content:false; --layout-edge:false; --hide-desktop:false; --hide-mobile:false;">
+        <div class="layout">
             <div class="layout__content">
+                <div class="checkout-v2-wrapper co-section--content_wrapper">
 
-
-                <div class="breadcrumb-wrapper delemeter_1">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item home">
-                            <a class="breadcrumb-link" title="Главная" href="/">Главная</a>
-                        </li>
-
-                        <li class="breadcrumb-item">
-                            <span class="breadcrumb-page">Контакты</span>
-                        </li>
-
-                    </ul>
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <div class="layout widget-type_system_widget_v4_page_title_1"
-             style="--layout-wide-bg:false; --layout-mt:0vw; --layout-mb:0vw; --layout-pt:0vw; --layout-pb:0vw; --layout-content-max-width:808px; --layout-wide-content:false; --layout-edge:false; --hide-desktop:false; --hide-mobile:false;">
-            <div class="layout__content">
-                <h1 class="page-headding heading">
-
-                    Контакты
-
-                </h1>
-
-            </div>
-        </div>
-
-
-        <div class="layout widget-type_system_widget_v4_page_content_1"
-             style="--layout-wide-bg:false; --layout-mt:0vw; --layout-mb:0vw; --layout-pt:0vw; --layout-pb:2vw; --layout-content-max-width:808px; --layout-wide-content:false; --layout-edge:false; --hide-desktop:false; --hide-mobile:false;">
-            <div class="layout__content">
-                <div class="static-text">
-                    <p>Разместите на этой странице информацию с контактами вашего интернет-магазина, а также краткую
-                        информацию о нем.</p>
-                    <p><strong><em>Например:</em></strong></p>
-                    <p><strong><em>----</em></strong></p>
-                    <p>Вы можете найти нас по адресу: г. Москва, ул. Торговая, дом 123, офис 456</p>
-                    <p>Как добраться: Сокольническая линия метро, последний вагон из центра, выход в сторону Казанского
-                        вокзала.</p>
-                    <p>Телефон отдела продаж: 8-495-123-45-67 (многоканальный)</p>
-                    <p>Телефон отдела оптовых продаж: 8-495-765-43-21</p>
-                    <p>Email: sales@myshop.ru</p>
-                    <p><strong>График работы офиса и склада:</strong></p>
-                    <div class="table-wrapper">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>Понедельник</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Вторник</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Среда</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Четверг</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Пятница</td>
-                                <td>с 9:00 до 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Суббота</td>
-                                <td>с 10:00 до 20:00</td>
-                            </tr>
-                            <tr>
-                                <td>Воскресенье</td>
-                                <td>с 10:00 до 20:00</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="co-section--content">
+                        <div class="co-section--checkout_header co-checkout-block--padded">
+                            <h1 class="co-checkout-title co-title co-title--h1">
+                                Вход в кабинет покупателя
+                            </h1>
+                        </div>
+                        <div class="co-login">
+                            <div class="co-login-form_placeholder co-checkout-block--padded">
+                                <form class="co-form--login co-modal-login_form" data-code-resend-timeout="60"
+                                      data-use-mask="1" data-active-block=".co-form--login_by_email"
+                                      action="/client_account/session" accept-charset="UTF-8" method="post"><input
+                                        name="utf8" type="hidden" value="✓"><input type="hidden"
+                                                                                   name="authenticity_token"
+                                                                                   value="DvrhTm8/BCbqpxAcext5WEOXaAmCYrraFYzdF+n2mScFbWP6cg6ixs1AAc/iA2UIftki6jOL0IJFj9Kx92iPuQ==">
+                                    <div
+                                        class="co-input co-input--text co-input--language co-input--nested co-input--required co-input--empty_nested">
+                                        <label class="co-input-label" for="email">Телефон или email</label>
+                                        <div class="co-input-text"><input type="text" name="email" id="email"
+                                                                          class="co-input-field js-input-field"
+                                                                          required="required"></div>
+                                    </div>
+                                    <div
+                                        class="co-input co-input--text co-input--language co-input--nested co-input--required co-input--empty_nested">
+                                        <label class="co-input-label" for="password">Пароль</label>
+                                        <div class="co-input-text"><input type="password" name="password" id="password"
+                                                                          class="co-input-field js-input-field"
+                                                                          required="required"></div>
+                                    </div>
+                                    <div class="co-form-controls">
+                                        <button class="co-button co-form-button js-co-login-submit" name="commit"
+                                                type="submit">Войти
+                                        </button>
+                                        <a class="co-button co-button--link co-form-button"
+                                           href="/client_account/password/change">Восстановить пароль</a><a
+                                            class="co-button co-button--link co-form-button"
+                                            href="/client_account/contacts/new">Зарегистрироваться</a></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="co-login co-login--social_login co-checkout-block--padded"></div>
                     </div>
-                    <p>Заказы через сайт принимаются круглосуточно!</p>
-                    <p><strong>Реквизиты:</strong></p>
-                    <p>ИП Иванов Иван Иванович</p>
-                    <p>ОГРНИП: 123456789012345</p>
-                    <p>ИНН: 123456789012</p>
-                    <p>КПП: 123456789</p>
-                    <p style="text-align: left;">----</p>
-                    <p><em>Эту страницу можно отредактировать в бэк-офисе сайта в разделе <a rel="noopener noreferrer"
-                                                                                             href="/admin2/pages"
-                                                                                             target="_blank">Меню и
-                                страницы</a>.</em><em><br></em></p>
-                    <p><em>Подробнее о создании текстовых страниц и меню, читайте в документации:&nbsp;<a
-                                rel="noopener noreferrer"
-                                href="https://www.insales.ru/collection/doc-settings/product/razdel-menyu"
-                                target="_blank">https://www.insales.ru/collection/doc-settings/product/razdel-menyu</a></em>
-                    </p>
                 </div>
-
             </div>
         </div>
-
-
     </main>
-
-
     <footer>
 
         <div class="layout widget-type_system_widget_v4_footer_5"
@@ -1828,6 +2443,87 @@
     src="/served_assets/shop/demoshop_panel-9d8ecd3c0e4224b72ab1bdeaa53bf0f21fcdabe0dae9af060011fc0040cee8e1.js"></script>
 <link rel="stylesheet" media="screen"
       href="/served_assets/shop/demoshop_panel-a7bb6ff61ba5696abfc00e1ad326417cc52cb2ccd5bf0f6b114bf316a4f47169.css">
+<div class="is-demoshop insales-panel insales-panel_demoshop" id="insales-panel">
+    <div class="insales-panel__logotype">
+        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px" width="133px" height="43px" viewBox="0 0 136.516 48.154"
+             enable-background="new 0 0 136.516 48.154" xml:space="preserve">
+  <path fill="#ffffff" d="M35.102,25.505c-1.248-4.098-0.935-8.557,1.241-12.449c3.725-6.654,11.723-9.526,19.243-7.473l2.183,3.468
+                          l-3.494,2.902c-7.52-1.438-14.602,0.842-17.693,6.368C35.352,20.515,34.892,22.979,35.102,25.505L35.102,25.505z"></path>
+            <g>
+                <path fill="#ffffff" d="M10.986,47.626H5.099V18.097h5.888V47.626z"></path>
+                <path fill="#ffffff" d="M33.881,47.626h-5.8V34.708c-0.06-0.995-0.447-1.83-1.165-2.505c-0.718-0.674-1.589-1.039-2.614-1.099
+                            c-1.113,0.03-2.029,0.381-2.746,1.055c-0.719,0.675-1.121,1.494-1.209,2.461v13.007h-5.888V26.139h5.888v1.318
+                            c1.436-1.23,3.223-1.846,5.361-1.846c2.285,0,4.219,0.864,5.8,2.592c1.582,1.729,2.373,3.896,2.373,6.504V47.626z"></path>
+                <path fill="#ffffff" d="M60.658,38.97c0,3.047-1.136,5.339-3.405,6.877c-2.271,1.538-5.105,2.307-8.503,2.307
+                            c-4.453-0.029-8.48-1.641-12.084-4.834l4.262-4.262c2.549,1.963,5.259,3.031,8.13,3.207c1.758,0,3.164-0.285,4.219-0.856
+                            c1.054-0.571,1.581-1.354,1.581-2.351c0.029-0.996-0.454-1.816-1.45-2.461s-2.68-1.113-5.053-1.406
+                            c-3.516-0.439-6.086-1.435-7.712-2.988c-1.626-1.552-2.425-3.384-2.395-5.492c0-2.578,0.886-4.717,2.658-6.416
+                            c1.772-1.698,4.328-2.562,7.668-2.593c4.071,0.088,7.558,1.362,10.458,3.823L54.857,25.7c-1.669-1.289-3.69-1.992-6.063-2.109
+                            c-1.758,0-3.003,0.257-3.735,0.769c-0.732,0.513-1.099,1.165-1.099,1.956c0.029,0.82,0.418,1.436,1.165,1.845
+                            c0.747,0.411,1.999,0.703,3.757,0.879c3.72,0.352,6.613,1.385,8.679,3.099S60.658,36.128,60.658,38.97z"></path>
+                <path fill="#ffffff" d="M82.729,47.626h-5.58v-0.703c-1.729,0.674-3.633,1.011-5.713,1.011c-2.373,0-4.321-0.674-5.844-2.021
+                            c-1.524-1.347-2.285-3.076-2.285-5.185c0-2.227,0.842-4.079,2.526-5.56c1.685-1.479,3.801-2.219,6.35-2.219
+                            c1.729,0,3.412,0.191,5.054,0.571c0.058-0.791-0.235-1.421-0.879-1.89c-0.645-0.468-1.655-0.717-3.032-0.747
+                            c-2.051,0-4.043,0.527-5.977,1.582l-2.284-4.569c2.929-1.523,5.683-2.285,8.261-2.285c2.812,0,5.082,0.659,6.811,1.978
+                            c1.729,1.317,2.593,3.325,2.593,6.02V47.626z M77.148,41.738v-3.207c-1.758-0.352-3.413-0.527-4.966-0.527
+                            c-0.938,0-1.722,0.234-2.351,0.703c-0.631,0.469-0.945,1.04-0.945,1.714c0,0.645,0.374,1.216,1.121,1.713
+                            c0.747,0.499,1.647,0.747,2.702,0.747C74.32,42.88,75.801,42.5,77.148,41.738z"></path>
+                <path fill="#ffffff" d="M92.272,47.626h-5.888v-26.98l5.888-2.944V47.626z"></path>
+                <path fill="#ffffff" d="M115.312,38.75H101.25c0.264,1.23,0.82,2.197,1.67,2.899c0.85,0.703,1.86,1.041,3.032,1.011
+                            c1.318,0,2.489-0.512,3.516-1.537l3.91,3.075c-1.963,2.549-4.453,3.823-7.47,3.823c-3.047,0-5.537-1.047-7.471-3.142
+                            c-1.933-2.095-2.899-4.782-2.899-8.063c0-2.08,0.439-3.999,1.318-5.757s2.123-3.104,3.734-4.042s3.296-1.406,5.054-1.406
+                            c1.786,0,3.449,0.527,4.987,1.582c1.538,1.054,2.702,2.453,3.493,4.196S115.312,35.586,115.312,38.75z M109.512,33.873
+                            c-0.206-0.938-0.675-1.67-1.406-2.197c-0.732-0.527-1.554-0.805-2.461-0.835c-0.908,0.03-1.735,0.308-2.482,0.835
+                            s-1.224,1.26-1.429,2.197H109.512z"></path>
+                <path fill="#ffffff" d="M136.516,41.43c0,1.758-0.784,3.296-2.351,4.614c-1.567,1.318-4.064,1.978-7.492,1.978
+                            c-3.018,0-6.343-0.819-9.975-2.461l2.593-5.141c2.694,1.553,5.229,2.358,7.602,2.416c1.846-0.058,2.944-0.241,3.296-0.549
+                            s0.527-0.622,0.527-0.945c0-0.321-0.198-0.637-0.594-0.944s-1.619-0.666-3.669-1.076c-2.52-0.498-4.577-1.245-6.174-2.241
+                            s-2.425-2.373-2.482-4.131c-0.06-2.167,0.725-3.933,2.351-5.295s3.786-2.043,6.481-2.043c3.046,0,6.181,0.82,9.403,2.461
+                            l-2.461,4.877c-2.49-1.083-4.73-1.67-6.723-1.758c-1.084,0-1.883,0.117-2.395,0.352c-0.514,0.235-0.77,0.587-0.77,1.055
+                            c0.059,0.352,0.314,0.631,0.77,0.835c0.453,0.205,1.486,0.513,3.098,0.923c2.9,0.674,5.119,1.509,6.657,2.505
+                            S136.516,39.38,136.516,41.43z"></path>
+            </g>
+</svg>
+    </div>
+    <div class="insales-panel__caption insales-panel__shop-title"><a class="insales-panel__preview-label"
+                                                                     href="http://www.insales.ru/collection/themes"><span
+                class="translation_missing"
+                title="translation missing: ru.shop.order_registration.shared.demoshop_panel.panel_title">Panel Title</span></a>
+        <div class="insales-panel__theme-title">Шаблон интернет магазина - Loft</div>
+    </div>
+    <div class="insales-panel__right-section">
+        <div class="insales-panel__section" data-demoshop-auth="https://auth.insales.ru/authorized_domains"
+             id="demo-use-theme" style="display: block;"><a
+                class="insales-panel__button insales-panel__button_install-theme"
+                href="https://myshop-bpn125.myinsales.ru/admin2/remote_themes/250007398/install" rel="external"
+                title="<span class=" translation_missing"="">Buy Install Help"&gt;<span class="translation_missing"
+                                                                                        title="translation missing: ru.shop.order_registration.shared.demoshop_panel.install_theme">Install Theme</span>
+            для myshop-bpn125.myinsales.ru</a></div>
+        <div class="insales-panel__section" data-demoshop-auth="https://auth.insales.ru/authorized_domains"
+             id="demo-create-shop" style="display: none"><a
+                class="insales-panel__button insales-panel__button_install-theme"
+                href="http://www.insales.ru/page/registration_template?demo_shop_account=demo-loft&amp;remote_theme_id=613"
+                rel="external">
+                <div class="insales-panel__button-text"><span><span class="translation_missing"
+                                                                    title="translation missing: ru.shop.order_registration.shared.demoshop_panel.create_shop">Create Shop</span></span>
+                    <span><span class="translation_missing"
+                                title="translation missing: ru.shop.order_registration.shared.demoshop_panel.use_current_template">Use Current Template</span></span>
+                </div>
+            </a></div>
+    </div>
+    <button class="is-toggle-panel insales-panel__toggle">
+        <div class="inner-toggle-panel">
+            <svg fill="none" height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 4L7 10L12 4" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="1.5"></path>
+            </svg>
+        </div>
+    </button>
+</div>
+<link rel="stylesheet" media="screen"
+      href="/served_assets/checkout2.core-5863ae33e9ad84c8620a90541e7ebdd2adbeb98acc13e9b9866dafdb475bfcc2.css">
+
 
 <script src="https://assets3.insales.ru/assets/common-js/common.v2.21.6.js"></script>
 <script src="https://assets3.insales.ru/assets/static-versioned/2.17/static/libs/my-layout/1.0.0/my-layout.js"></script>
@@ -1852,97 +2548,6 @@
 <style>
     .widget-type_system_widget_v4_alerts .micro-alerts {
         display: none
-    }
-
-    &
-    #65279
-
-    ;
-    .widget-type_system_widget_v4_breadcrumbs_1 {
-        background-color: var(--bg)
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1[style*="--bg-is-dark:true"] {
-        color: var(--color-text-light);
-        --color-text: var(--color-text-light);
-        --color-text-minor-shade: var(--color-text-light-minor-shade);
-        --color-text-major-shade: var(--color-text-light-major-shade);
-        --color-text-half-shade: var(--color-text-light-half-shade)
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1[style*="--bg-is-light:true"] {
-        color: var(--color-text-dark);
-        --color-text: var(--color-text-dark);
-        --color-text-minor-shade: var(--color-text-dark-minor-shade);
-        --color-text-major-shade: var(--color-text-dark-major-shade);
-        --color-text-half-shade: var(--color-text-dark-half-shade)
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1[style*="--delemeter:1"] .breadcrumb-wrapper ul > *:not(:last-child):after {
-        content: "/"
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1[style*="--delemeter:2"] .breadcrumb-wrapper ul > *:not(:last-child):after {
-        content: "•";
-        font-size: 1.5rem;
-        vertical-align: middle;
-        line-height: 0;
-        font-family: auto
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1[style*="--delemeter:3"] .breadcrumb-wrapper ul > *:not(:last-child):after {
-        content: ">"
-    }
-
-    @media screen and (min-width: 769px) {
-        .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul .button-breadcrumb {
-            display: none
-        }
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-item.hidden {
-        display: none
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .bttn-hidden-breadcrumbs {
-        border: none;
-        line-height: 1;
-        background: none
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper {
-        display: grid;
-        justify-content: var(--align)
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul {
-        margin: 0;
-        padding: 0
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul li {
-        display: inline-block;
-        vertical-align: top;
-        color: var(--breadcrumb-color, var(--color-text-half-shade))
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul li a {
-        text-decoration: none;
-        color: var(--breadcrumb-color, var(--color-text-half-shade))
-    }
-
-    .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul > *:not(:last-child):after {
-        content: "/";
-        display: inline-block;
-        vertical-align: top;
-        opacity: 0.7;
-        margin: 0 10px
-    }
-
-    @media screen and (max-width: 768px) {
-        .widget-type_system_widget_v4_breadcrumbs_1 .breadcrumb-wrapper ul > *:not(:last-child):after {
-            margin: 0 5px
-        }
     }
 
     .widget-type_system_widget_v4_callback_modal_1.layout {
@@ -2802,30 +3407,6 @@
         background: var(--color-btn-color);
         color: var(--color-btn-bg-minor-shade);
         border-color: var(--color-btn-bg-minor-shade)
-    }
-
-    .widget-type_system_widget_v4_page_content_1 {
-        background-color: var(--bg)
-    }
-
-    [style*="--bg-is-dark:true"].widget-type_system_widget_v4_page_content_1 {
-        color: var(--color-text-light);
-        --color-text: var(--color-text-light);
-        --color-text-minor-shade: var(--color-text-light-minor-shade);
-        --color-text-major-shade: var(--color-text-light-major-shade);
-        --color-text-half-shade: var(--color-text-light-half-shade)
-    }
-
-    [style*="--bg-is-light:true"].widget-type_system_widget_v4_page_content_1 {
-        color: var(--color-text-dark);
-        --color-text: var(--color-text-dark);
-        --color-text-minor-shade: var(--color-text-dark-minor-shade);
-        --color-text-major-shade: var(--color-text-dark-major-shade);
-        --color-text-half-shade: var(--color-text-dark-half-shade)
-    }
-
-    .widget-type_system_widget_v4_page_content_1 .static-text {
-        overflow: hidden
     }
 
     .widget-type_system_widget_v4_preorder_1.layout {
@@ -4864,30 +5445,6 @@
     }
     ;
     try {
-        let widget = '.widget-type_system_widget_v4_breadcrumbs_1';
-        let $widget = $('.widget-type_system_widget_v4_breadcrumbs_1');
-        $(document).ready(function () {
-            if (window.innerWidth <= 768) {
-                if ($('.hidden-breadcrumbs').hasClass("js-hidden-bread")) {
-                    $('.breadcrumb-item').each(function (index) {
-                        if (index > 2 && index != $(".breadcrumb-item").length - 1) {
-                            $(this).not('.button-breadcrumb').addClass("hidden");
-                        }
-                    });
-
-                    $('.js-hidden-bread').click(function () {
-                        $('.breadcrumb-item').removeClass("hidden");
-                        $('.js-hidden-bread').parent().addClass("hidden");
-                    });
-                }
-            }
-        });
-
-    } catch (error) {
-        console.error('Widget "widget-type_system_widget_v4_breadcrumbs_1" throwed an error: "' + error.stack + '"')
-    }
-    ;
-    try {
         let widget = '.widget-type_system_widget_v4_callback_modal_1';
         let $widget = $('.widget-type_system_widget_v4_callback_modal_1');
         $(document).ready(function () {
@@ -5384,7 +5941,6 @@
 
 <link href="https://assets3.insales.ru/assets/1/4672/1659456/1628672504/theme.css" rel="stylesheet" type="text/css"
       onload="document.body.classList.add('settings_loaded');">
-
 
 <script src="https://assets3.insales.ru/assets/1/4672/1659456/1628672504/theme.js" charset="utf-8"></script>
 
