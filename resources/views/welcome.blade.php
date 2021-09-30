@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>twst</h1>
+<h1>twssdfgsdfgsdfgsdfgsdfgdt</h1>
 @endsection
